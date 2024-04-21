@@ -1,0 +1,16 @@
+runtime: python310
+
+env: standard
+
+entrypoint: gunicorn -b :$PORT main:app
+
+env_variables:
+  GOOGLE_CLOUD_PROJECT: doofer-ae
+
+handlers:
+  - url: /
+    static_files: index.html
+    upload: index.html
+
+  - url: /api/tasks
+    script: main.app

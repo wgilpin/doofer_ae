@@ -1,0 +1,26 @@
+# Bytecode
+__pycache__/
+*.pyc
+
+# Compiled model files
+*.pyo
+
+# Logs
+*.log
+
+# Temporary files
+*.swp
+*.swo
+
+# Virtualenv
+venv/
+env/
+
+# Local configuration
+.local/
+
+# Editor temporary/working/backup files
+.#*
+*~
+*.bak
+*.swp
