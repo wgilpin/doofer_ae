@@ -1,0 +1,12 @@
+{% extends "index.html" %}
+
+{% block title%}Doofer{% endblock %}
+
+{% block content %}
+  <h1>Root</h1>
+  {% if htmx %}
+    <p>This is the htmx content.</p>
+  {% else %}
+    <p>This is the root page.</p>
+  {% endif %}
+{% endblock %}
