@@ -1,12 +1,19 @@
-{% extends "index.html" %}
+{% extends "base.html" %}
 
 {% block title%}Doofer{% endblock %}
 
 {% block content %}
-  <h1>Root</h1>
+  <div class="text-xl font-medium text-black">Rooot</div>
   {% if htmx %}
     <p>This is the htmx content.</p>
+    <div class="row flex-wrap">
+      {% for note in notes %}
+        <p>{{ note.title }}</p>
+      {% endfor %}
+    </div>
+    
   {% else %}
     <p>This is the root page.</p>
+    <button hx-get="/" hx-target="#root" hx-swap="outerHTML">Load htmx content</button>
   {% endif %}
 {% endblock %}

@@ -24,3 +24,6 @@ env/
 *~
 *.bak
 *.swp
+
+# node
+node_modules/
